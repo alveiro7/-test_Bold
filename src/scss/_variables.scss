@@ -1,0 +1,37 @@
+/* ------------------------------
+            $VARIABLES
+------------------------------- */
+
+/* -------- $COLORS----------- */
+$primary-color:  #111e6c;
+$secundary-color:  #ef434e;
+$dark-grey : #323232;
+$ligth-grey: #969696;
+$background: #e5e7ef;
+$just-white:#FFFFFF;
+
+
+$header: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(239,67,78,1) 100%);
+
+/* ------------$FONTS--------------- */
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../assets/fonts/montserrat.woff2') format('woff2'),
+		url('../assets/fonts/montserrat.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+$font-stack: 'Monserrat', sans-serif;
+
+/* -----------$BREAKPOINTS---------- */
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
