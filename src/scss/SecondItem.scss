@@ -1,0 +1,23 @@
+@use  "variables" as var;
+@use 'mixins' as mix;
+
+.time {
+    width: 400px;
+    height: 50px;
+    background-color: var.$just-white;
+    & ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-column: repeat(3, 1fr);
+    gap: 40px;
+
+    }
+    & li {
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            background-color: var.$ligth-grey;
+    }
+    }
+}

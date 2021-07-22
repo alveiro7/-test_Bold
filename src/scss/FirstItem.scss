@@ -4,12 +4,11 @@
 
 
 .total {
-    width: 70%;
     display: grid;
     font-family: var.$font-stack;
     grid-template: repeat(3, minmax(30px,1fr)) / repeat(3, 1fr);
     min-width: 190px;
-    max-width: 265px;
+    max-width: 360px;
     height: 160px;
     margin: 50px 5px 0;
     background-color: var.$just-white;

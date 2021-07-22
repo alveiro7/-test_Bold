@@ -13,7 +13,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath:'/'
+        publicPath:''
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -90,7 +90,7 @@ module.exports = {
             patterns: [
                 {   // la carpeta que voy a copiar
                     from: path.resolve(__dirname, "src", "assets/images"),
-                    to: "assets/images" // la ruta donde van los archivos
+                    to: "./assets/images" // la ruta donde van los archivos
                 }
             ]
         }),
