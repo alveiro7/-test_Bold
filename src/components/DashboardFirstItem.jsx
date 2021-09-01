@@ -7,7 +7,7 @@ const DashboardFirstItem = () => (
                 <h3>Total ventas de hoy</h3>
             </div>
             <div className="total__price">
-                <p >$1'560</p>
+                <p>$1’560.00</p>
             </div>
             <div className="total__info">
                 <small> Septiembre 21</small>

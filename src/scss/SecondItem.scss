@@ -2,22 +2,33 @@
 @use 'mixins' as mix;
 
 .time {
-    width: 400px;
-    height: 50px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: bold;
+    height: 60px;
     background-color: var.$just-white;
     & ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    grid-column: repeat(3, 1fr);
-    gap: 40px;
+        color: var.$primary-color;
+        font-size: 1.6rem;
+        width: 100%;
+        background-color: var.$just-white;
+        display: inherit;
+        cursor: pointer;
 
     }
     & li {
-        cursor: pointer;
-        text-decoration: none;
+        list-style: none;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.4s;
         &:hover {
-            background-color: var.$ligth-grey;
+            background-color: var.$primary-background;
+            border-radius: 30px;
+            margin: 5px;
+            font-weight: bold;
     }
     }
 }
