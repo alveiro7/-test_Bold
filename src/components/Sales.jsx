@@ -2,10 +2,10 @@
 import React from 'react'
 import '../scss/Sales.scss'
 
-const Sales = () => (
-    <section>
-        <div>
-            <h2>Tus ventas de septiembre</h2>
+const Sales = ({time, data}) => (
+    <section className="table__container">
+        <div className="table__header">
+            <h2>Tus ventas de {time} </h2>
         </div>
         <table>
             <thead>
@@ -17,7 +17,7 @@ const Sales = () => (
                     <th>Monto</th>
                 </tr>
             </thead>
-                <tbody>
+                <tbody className="table__body">
                     <tr>
                         <td>payCheck(payData.exitoso)</td>
                         <td>payData.date</td>
