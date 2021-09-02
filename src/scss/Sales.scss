@@ -3,28 +3,71 @@
 @use 'mixins' as mix;
 
 
-.table{
-    width: 100%;
-    text-align: left;
-    .text{
-        font-size: 12px;
-        font-weight: 400;
+.table__container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin: 20px;
+    background-color: var.$just-white;
+    border-radius: var.$border-round;
+    .table__header {
+        display: block;
+        background-image: var.$header;
+        height: 10%;
+        border-top-right-radius: var.$border-round;
+        border-top-left-radius: var.$border-round;
+        padding: 10px 20px;
+        color: var.$just-white;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
     }
-    thead{
-        padding: 10px;
-        border-bottom: 1px solid var.$ligth-grey ;
-        font-size: 18px;
-        tr{
-            th{
-                font-weight: 500;
+    table {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        overflow: scroll;
+        thead {
+            tr {
+                padding: 20px;
+                display: block;
+                border-bottom: 0.5px solid red;
+                th {
+                    color: var.$dark-grey;
+                    width: 25%;
+                    padding: 0 20px;
+                }
+            }
+        }
+        .table__body {
+            max-height: 380px;
+            display: block;
+            overflow-y: scroll;
+        tr {
+            padding: 20px;
+            display: block;
+            border-bottom: 0.5px solid red;
+            td {
+                color: var.$ligth-grey;
+                height: 50px;
+                padding: 20px;
+                width: 25%;
+                span {
+                    margin: 0 2px;
+                }
+            }
+            .blueCell {
+                color: var.$primary-color;
+                p {
+                    font-size: 13px;
+                    color: var.$ligth-grey;
+                    em {
+                        color: red;
+                    }
+                }
             }
         }
     }
-    tbody{
-        font-size: 14px;
-        tr{
-            border-left: 5px solid var.$primary-color;
-            box-shadow: inset -5px 0 0  var.$dark-grey;
-        }
     }
 }

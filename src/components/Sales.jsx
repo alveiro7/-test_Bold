@@ -5,7 +5,7 @@ import '../scss/Sales.scss'
 const Sales = ({time, data}) => (
     <section className="table__container">
         <div className="table__header">
-            <h2>Tus ventas de {time} </h2>
+            Tus ventas de {time}
         </div>
         <table>
             <thead>
