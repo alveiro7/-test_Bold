@@ -1,22 +1,21 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Header from '../components/Header'
-import DashboardFirstItem from '../components/DashboardFirstItem'
-import SecondItem from '../components/SecondItem'
-import Filter from '../components/Filter'
-import Sales from '../components/Sales'
+import React, { Fragment } from 'react'
+import Header from '../components/Header/Header'
+import TotalSales from '../components/TotalSales/TotalSales'
+import TimeSales from '../components/TimeSales/TimeSales'
+import FilterSalesModal from '../components/FilterSalesModal/FilterSalesModal'
+import YourSales from '../components/YourSales/YourSales'
 
-import '../scss/App.scss'
+import './App.scss'
 
 
 const App = () => (
-    <Layout>
+    <Fragment>
         <Header />
-        <DashboardFirstItem />
-        <SecondItem />
-        <Filter />
-        <Sales />
-    </Layout>
+        <TotalSales />
+        <TimeSales />
+        <FilterSalesModal />
+        <YourSales />
+    </Fragment>
     )
 
 

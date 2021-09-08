@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Filter = () => (
+const FilterSalesModal = () => (
         <button>
             Filtrar
         </button>
 )
 
-export default Filter
+export default FilterSalesModal

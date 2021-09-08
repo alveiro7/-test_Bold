@@ -1,7 +1,7 @@
 import React from 'react'
-import '../scss/SecondItem.scss'
+import './TimeSales.scss'
 
-const SecondItem = () => (
+const TimeSales = () => (
     <nav className="time">
         <ul className="time__list">
             <li>Hoy</li>
@@ -11,4 +11,4 @@ const SecondItem = () => (
     </nav>
 )
 
-export default SecondItem
+export default TimeSales

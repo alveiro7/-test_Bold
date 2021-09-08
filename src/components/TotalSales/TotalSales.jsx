@@ -1,7 +1,7 @@
 import React from 'react'
-import '../scss/FirstItem.scss'
+import '../TotalSales/TotalSales.scss'
 
-const DashboardFirstItem = () => (
+const TotalSales = () => (
         <article className="total">
             <div className="total__title">
                 <h3>Total ventas de hoy</h3>
@@ -15,4 +15,4 @@ const DashboardFirstItem = () => (
         </article>
 )
 
-export default DashboardFirstItem
+export default TotalSales

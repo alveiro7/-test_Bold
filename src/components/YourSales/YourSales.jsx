@@ -1,8 +1,8 @@
 
 import React from 'react'
-import '../scss/Sales.scss'
+import './YourSales.scss'
 
-const Sales = ({time, data}) => (
+const YourSales = ({time, data}) => (
     <section className="table__container">
         <div className="table__header">
             Tus ventas de {time}
@@ -30,4 +30,4 @@ const Sales = ({time, data}) => (
         </section>
 )
 
-export default Sales
+export default YourSales

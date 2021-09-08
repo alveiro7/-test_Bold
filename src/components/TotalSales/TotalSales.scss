@@ -1,6 +1,6 @@
-@forward  "reset";
-@use  "variables" as var;
-@use 'mixins' as mix;
+@forward  "../../scss/reset";
+@use '../../scss/mixins' as mix;
+@use  "../../scss/variables" as var;
 
 
 .total {
