@@ -1,14 +1,23 @@
 import React from 'react'
 import './TimeSales.scss'
 
-const TimeSales = () => (
+const dates = ["Hoy", "Esta Semana", "Mes"]
+
+const TimeSales = () => {
+
+    return (
     <nav className="time">
         <ul className="time__list">
-            <li>Hoy</li>
-            <li>Esta semana</li>
-            <li>Septiembre</li>
+            {   dates.map( date =>(
+                <li>{date}</li>
+            ))
+
+            }
+
         </ul>
     </nav>
 )
+
+}
 
 export default TimeSales
