@@ -2,7 +2,7 @@
 import React from 'react'
 import './YourSales.scss'
 
-const YourSales = ({time, data}) => (
+const YourSales = ({time}) => (
     <section className="table__container">
         <div className="table__header">
             Tus ventas de {time}

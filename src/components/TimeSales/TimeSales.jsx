@@ -1,18 +1,31 @@
 import React from 'react'
 import './TimeSales.scss'
 
-const dates = ["Hoy", "Esta Semana", "Mes"]
 
-const TimeSales = () => {
+
+const TimeSales = ({time, setTime}) => {
 
     return (
     <nav className="time">
         <ul className="time__list">
-            {   dates.map( date =>(
-                <li>{date}</li>
-            ))
-
-            }
+            <li
+                className={time==="hoy" ? "time__li--active" : "time__li"}
+                onClick={() => setTime("hoy")}
+                >
+                    hoy
+            </li>
+            <li
+                className={time==="esta semana" ? "time__li--active" : "time__li"}
+                onClick={() => setTime("esta semana")}
+                >
+                    esta semana
+            </li>
+            <li
+                className={time==="septiembre" ? "time__li--active" : "time__li"}
+                onClick={() => setTime("septiembre")}
+                >
+                    septiembre
+            </li>
 
         </ul>
     </nav>

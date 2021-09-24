@@ -15,20 +15,27 @@
         background-color: var.$just-white;
         display: inherit;
         cursor: pointer;
-
+        & li{
+            list-style: none;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-duration: 0.4s;
+            &:onclick{
+                background-color: var.$primary-background;
+                border-radius: 30px;
+                margin: 5px;
+                font-weight: bold;
+            }
+        }
+ 
     }
-    & li {
-        list-style: none;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition-duration: 0.4s;
-        &:hover {
-            background-color: var.$primary-background;
-            border-radius: 30px;
-            margin: 5px;
-            font-weight: bold;
-    }
+    &__li--active{
+        background-color: var.$primary-background;
+        color:red;
+        border-radius: 30px;
+        margin: 5px;
+        font-weight: bold;
     }
 }
