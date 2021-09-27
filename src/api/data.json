@@ -1,0 +1,30 @@
+{
+    "payments": [
+        {
+            "id": 1,
+            "successful_payment": true,
+            "date": "2021-09-26 16:35:45",
+            "idpayment": {
+                "franchise": "mastercard",
+                "card_number": "123 456 789 1011"
+            },
+            "pay": "cobro con datáfono",
+            "id_transaction_bold": "GZEN23784UBV01",
+            "amount": 20000,
+            "deduction_bold": 1500
+        },
+        {
+            "id": 1,
+            "successful_payment": true,
+            "date": "2021-09-26 16:35:45",
+            "idpayment": {
+                "franchise": "mastercard",
+                "card_number": "123 456 789 1011"
+            },
+            "pay": "cobro con datáfono",
+            "id_transaction_bold": "GZEN23784UBV01",
+            "amount": 20000,
+            "deduction_bold": 1500
+        }
+    ]
+}
