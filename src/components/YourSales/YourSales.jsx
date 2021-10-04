@@ -2,7 +2,7 @@
 import React from 'react'
 import './YourSales.scss'
 
-const YourSales = ({time}) => (
+const YourSales = ({time, payment, setPayment}) => (
     <section className="table__container">
         <div className="table__header">
             Tus ventas de {time}
@@ -18,13 +18,15 @@ const YourSales = ({time}) => (
                 </tr>
             </thead>
                 <tbody className="table__body">
-                    <tr>
-                        <td>payCheck(payData.exitoso)</td>
-                        <td>payData.date</td>
-                        <td>payData.creditcard</td>
-                        <td>payData.idpayment</td>
-                        <td>payData.amount</td>
+                    { payment && payment.length>0 && payment.map((item) =>
+                        <tr key={payment.id}>
+                            <td>payCheck(payData.exitoso)</td>
+                            <td>{payment.date}</td>
+                            <td>payData.creditcard</td>
+                            <td>payData.idpayment</td>
+                            <td>payData.amount</td>
                     </tr>
+                    )}
                 </tbody>
             </table>
         </section>

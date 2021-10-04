@@ -5,7 +5,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyPlugin = require ('copy-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
 
 module.exports = {
     mode: 'production',
@@ -94,7 +93,6 @@ module.exports = {
                 }
             ]
         }),
-        new Dotenv(),
         new CleanWebpackPlugin()
 
     ],
