@@ -1,9 +1,18 @@
 
 import React from 'react'
+import DeductionBold from '../DeductionBold/DeductionBold'
 import './YourSales.scss'
 
-const YourSales = ({time, payment, setPayment}) => (
-    <section className="table__container">
+const YourSales = ({time, payment}) => {
+
+
+    const payCheck = pay =>  pay ? "Cobro exitoso" : 'Cobro no realizado'
+
+    const payCheckAmount = pay => pay ?  <DeductionBold /> : ""
+
+
+    return (
+        <section className="table__container">
         <div className="table__header">
             Tus ventas de {time}
         </div>
@@ -19,17 +28,19 @@ const YourSales = ({time, payment, setPayment}) => (
             </thead>
                 <tbody className="table__body">
                     { payment && payment.length>0 && payment.map((item) =>
-                        <tr key={payment.id}>
-                            <td>payCheck(payData.exitoso)</td>
-                            <td>{payment.date}</td>
-                            <td>payData.creditcard</td>
-                            <td>payData.idpayment</td>
-                            <td>payData.amount</td>
+                        <tr key={item.id}>
+                            <td>{payCheck(item.successful_payment)}</td>
+                            <td>{item.date}</td>
+                            <td>{item.pay}</td>
+                            <td>{item.id_transaction_bold}</td>
+                            <td>${item.amount} {payCheckAmount(item.successful_payment)}</td>
                     </tr>
                     )}
                 </tbody>
             </table>
         </section>
+
 )
+}
 
 export default YourSales

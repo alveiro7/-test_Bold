@@ -4,7 +4,7 @@ import TotalSales from '../components/TotalSales/TotalSales'
 import TimeSales from '../components/TimeSales/TimeSales'
 import FilterSalesModal from '../components/FilterSalesModal/FilterSalesModal'
 import YourSales from '../components/YourSales/YourSales'
-import getData from '../utils/getData'
+
 
 import './App.scss'
 
@@ -15,6 +15,30 @@ const App = () => {
     const option = [{id: 1, name:"hoy"}, {id:2, name:"esta semana"}, {id:3, name: "septiembre"}]
 
     const [payment, setPayment]=useState([]);
+    const [paymentsToShow, setPaymentstoShow] = useState([]);
+
+
+    const API_URL = 'http://localhost:3004/payments';
+
+
+    const getData = ()  => {
+        fetch(API_URL,
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(function(response){
+                    console.log(response)
+                    return response.json()
+                })
+                .then(function(myJson) {
+                    console.log(myJson)
+                    setPayment(myJson)
+
+                })
+        }
 
     useEffect(() => {
         getData()
@@ -26,7 +50,7 @@ const App = () => {
             <TotalSales time={time} />
             <TimeSales time={time} setTime={setTime}  />
             <FilterSalesModal />
-            <YourSales time={time} payment={payment} setPayment={setPayment} />
+            <YourSales time={time} payment={payment} />
         </Fragment>
     )
 }
