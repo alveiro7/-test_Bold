@@ -1,0 +1,39 @@
+.tootip{
+    position: relative;
+    &:hover{
+        .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .tooltiptext {
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: whitesmoke ;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        z-index: 9999;
+        padding: 20px 20px 10px 20px;
+        .cont_check{
+            float: left;
+            width: 100%;
+            margin: 0  0 10px;
+            .checkbox{
+                float: left;
+            }
+            label{
+                float: left;
+                font-size: 14px;
+                padding-left: 10px;
+                letter-spacing: 0px;
+                text-align: left;
+                font-weight: 500;
+                line-height: normal;
+            }
+}
+    }
+}
